@@ -1,12 +1,12 @@
-# Dioxus Liveview
+# Dioxus Adapters
 
 [![Crates.io][crates-badge]][crates-url]
 [![MIT licensed][mit-badge]][mit-url]
 [![Build Status][actions-badge]][actions-url]
 [![Discord chat][discord-badge]][discord-url]
 
-[crates-badge]: https://img.shields.io/crates/v/dioxus-liveview.svg
-[crates-url]: https://crates.io/crates/dioxus-liveview
+[crates-badge]: https://img.shields.io/crates/v/dioxus-fullstack.svg
+[crates-url]: https://crates.io/crates/dioxus-fullstack
 [mit-badge]: https://img.shields.io/badge/license-MIT-blue.svg
 [mit-url]: https://github.com/dioxuslabs/dioxus/blob/master/LICENSE
 [actions-badge]: https://github.com/dioxuslabs/dioxus/actions/workflows/main.yml/badge.svg
@@ -16,29 +16,16 @@
 
 [Website](https://dioxuslabs.com) |
 [Guides](https://dioxuslabs.com/learn/0.4/) |
-[API Docs](https://docs.rs/dioxus-liveview/latest/dioxus_liveview) |
+[API Docs](https://docs.rs/dioxus-fullstack/latest/dioxus_liveview) |
 [Chat](https://discord.gg/XgGxMSkvUM)
 
 ## Overview
 
-`dioxus-liveview` provides adapters for running the Dioxus VirtualDom over a WebSocket connection.
-
-The current backend frameworks supported include:
-
-- Axum
-- Warp
-- Salvo
-- Rocket
-
-Dioxus-LiveView exports some primitives to wire up an app into an existing backend framework.
-
-- A ThreadPool for spawning the `!Send` VirtualDom and interacting with it from WebSockets
-- An adapter for transforming various socket types into the `LiveViewSocket` type
-- The glue to load the interpreter into your app
+This crate provides a set of adapters that enable Dioxus-Fullstack and Dioxus-LiveView to work with popular rust frameworks. By default, Dioxus-Fullstack is built on Axum, so 3rd party frameworks will need to remain community-maintained.
 
 ## Contributing
 
-- Report issues on our [issue tracker](https://github.com/dioxuslabs/dioxus/issues).
+- Report issues on our [issue tracker](https://github.com/dioxuslabs/web-adapters/issues).
 - Join the discord and ask questions!
 
 ## License
